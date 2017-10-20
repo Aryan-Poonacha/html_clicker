@@ -1,0 +1,81 @@
+<!DOCTYPE html5>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="formats.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Merriweather&#8217"; rel='stylesheet' type='text/css'>
+  <script src="jscode.js">
+  </script>
+  <title>
+    MICROBACTERIAL AGE
+  </title>
+
+  <body id = "body">
+    <div id = "centre" class = "format">
+      <p id="centretext">
+        You are a cell.
+        <br>
+        It's the survival of the fittest.
+        <br>
+        <br>
+        To survive, you must divide, grow and evolve.
+      </p>
+      <button class ="buttonformat" id="button1" type="button" onclick="acknowledge()"> OK </button>
+      <button class ="buttonformat" id="fightbtn" type="button" onclick="fight()">FIGHT</button>
+      <button class ="buttonformat" id="fleebtn" type="button" onclick="flee()">FLEE</button>
+    </div>
+    <button class ="buttonformat" id="specialisebtn" type="button" onclick="specialise()"></button>
+
+
+      <div id="left" class = "format">
+        <button class="buttonformat" id = "respirebtn" onclick="respire()"> Respire <i class="fa fa-bolt"></i></button>
+        <button class="buttonformat" id = "evolvebtn" onclick="EVOLVE1()"></button>
+        <button class="buttonformat" id = "dividebtn" onclick="divide()"></button>
+        <button class="buttonformat" id = "chlorobtn" onclick="chloroplast()"></button>
+        <button class ="buttonformat" id = "mitobtn" onclick = "mitochondria()"></button>
+        <button class ="buttonformat" id = "lysobtn" onclick = "lysosome()"></button>
+        <button class ="buttonformat" id = "erbtn" onclick = "ER()"></button>
+        <button class ="buttonformat" id = "ribobtn" onclick = "ribosome()"></button>
+        <p id = "lefttext">
+        </p>
+      </div>
+
+      <div id = "right" class = "format">
+
+        <p class = "righttext" id = "ATPcount"></p>
+        <br>
+        <br>
+        <p class = "righttext" id = "cellscount"></p>
+        <br>
+        <br>
+        <p class = "righttext" id="chlorocount"></p>
+        <br>
+        <br>
+        <p class ="righttext" id = "mitocount"></p>
+        <br>
+        <br>
+        <p class = "righttext" id = "lysocount"></p>
+        <br>
+        <br>
+        <p class = "righttext" id = "ercount"></p>
+        <br>
+        <br>
+        <p class = "righttext" id = "ercount"></p>
+        <br>
+        <br>
+        <p class = "righttext" id = "ribocount"></p>
+      </div>
+
+      <div id="top" class = "format">
+        <p id = "toptext"> 2.9B BC - 66M BC </p>
+        <img id="ageindicator" src="Images/age1.png" style="position:fixed"> </img>
+        <button class ="buttonformat" id = "finalbtn" onclick = "location.href = 'age2/thehtml.html';"></button>
+      </div>
+
+      <div id="bottom" class = "format">
+        <p id="canvastext"></p>
+        <canvas id="canvas">
+        </canvas>
+      </div>
+</body>
+</html>

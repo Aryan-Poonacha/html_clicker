@@ -1,0 +1,337 @@
+#body
+{
+  background-image: url("Images/cells.jpg");
+}
+
+div.format
+{
+  border-style: solid;
+  border-color: rgb(67,70,75);
+  position: fixed;
+  background: #002e63; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #888888, #202020); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #888878, #202020); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #888888, #202020); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #888888, #202020); /* Standard syntax (must be last) */
+  width: 700px;
+  height: 600px;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||CENTRE||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+#centre
+{
+  left:340px;
+  top:120px;
+  height:340px;
+  width: 700px;
+}
+
+#centretext
+{
+  font-size: 200%;
+  font-family: Merriweather;
+  text-align: center;
+  font-weight:bolder;
+  position: relative;
+}
+
+
+#button1
+{
+  position: relative;
+  top:40px;
+  left:290px;
+}
+
+#fightbtn
+{
+  position: relative;
+  left:150px;
+  top: 100px;
+  display: none;
+}
+
+#fightbtn:active
+{
+  background-color: red;
+}
+
+#fleebtn
+{
+  position: relative;
+  left:300px;
+  top: 100px;
+  display: none;
+}
+
+#fleebtn:active
+{
+  background-color: yellow;
+}
+
+#specialisebtn
+{
+  width: 780px;
+  display: none;
+  padding: 10px 0px;
+  position: absolute;
+  left:305px;
+  top:500px;
+}
+
+#specialisebtn:active
+{
+  border-style: dotted;
+  border-width: 2px;
+  border-color: silver;
+  background-color: #000080;
+}
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||lEFT||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+#left
+{
+  top:50px;
+  height:575px;
+  width: 250px;
+}
+
+#respirebtn
+{
+  display: none;
+  position: relative;
+  left:52px;
+  top:10px;
+}
+
+#respirebtn:active
+{
+  border-style: dashed;
+  border-color: #FFFFFF;
+  background-color: #ADD8E6;
+}
+
+#evolvebtn
+{
+  display: none;
+  position: relative;
+  top:450px;
+  left:3px;
+}
+
+#evolvebtn:active
+{
+  border-style: ridge;
+  border-color: #353F3E;
+  background-color: #B22222;
+}
+
+#dividebtn
+{
+  display: none;
+  position: relative;
+  left:25px;
+  top:-12px;
+}
+
+#dividebtn:active
+{
+  border-style: dashed;
+  border-color: #7C7C7C;
+  background: ; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #51B59F, #823747); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #51B59F, #823747); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #51B59F, #823747); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #51B59F, #823747); /* Standard syntax (must be last) */
+}
+
+#chlorobtn
+{
+  display: none;
+  position: relative;
+  left:8px;
+  top:8px;
+}
+
+#chlorobtn:active
+{
+  border-style: dashed;
+  border-color: #228B22;
+  background-color: #55AE3A;
+}
+
+#mitobtn
+{
+  display: none;
+  position: relative;
+  left:8px;
+  top:26px;
+}
+
+#mitobtn:active
+{
+  border-style: dashed;
+  background-color: #FFDAB9;
+  border-color: crimson;
+}
+
+#lysobtn
+{
+  display: none;
+  position: relative;
+  left: 8px;
+  top: 42px;
+}
+
+#lysobtn:active
+{
+  border-style: dashed;
+  background-color: #573B0C;
+  border-color: darkgreen;
+}
+
+#erbtn
+{
+  display: none;
+  position: relative;
+  left: 8px;
+  top: 56px;
+}
+
+#erbtn:active
+{
+  border-style: dashed;
+  background-color: #FF69B4;
+}
+
+#ribobtn
+{
+  display: none;
+  position: relative;
+  left:8px;
+  top:70px;
+}
+
+#ribobtn:active
+{
+  border-style: dashed;
+  background-color: #000080;
+}
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||RIGHT||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+#right
+{
+  top:49px;
+  left:1100px;
+  height:320px;
+  width: 248px;
+}
+
+p.righttext
+{
+  display: none;
+  text-align: center;
+  border-style: inset;
+  border-color: #CCCCCC;
+  font-size: 120%;
+  font-family: Merriweather;
+  font-weight:bolder;
+  position: relative;
+  top:7px;
+  left:10px;
+  padding: 1px 35px;
+}
+
+#ribocount
+{
+  top: -29px;
+}
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||TOP||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+#top
+{
+  height:30px;
+  width: 1340px;
+}
+
+#toptext
+{
+  font-size: 120%;
+  font-family: Merriweather;
+  text-align: right;
+  font-weight: 600;
+  position: fixed;
+  right:0px;
+  bottom: 5px;
+  color: #ffbd1b;
+  background-color: silver;
+  border-style: groove;
+  border-color: black;
+  padding: 10px 32px;
+}
+
+#finalbtn
+{
+  display: none;
+  position: relative;
+  left:1118px;
+  font-size: 16.5px;
+  padding: 2px 10px;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||BOTTOM||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+#bottom
+{
+  top:595px;
+  left:283px;
+  width:820px;
+  height: 30px;
+  display: none;
+}
+
+#canvas
+{
+  height:30px;
+  width: 820px;
+  display: none;
+}
+
+#canvastext
+{
+  display: none;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  position: relative;
+  left:390px;
+  top:2px;
+}
+.buttonformat
+{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2f4f4f;
+  background-color: #222222;
+  padding: 10px 36px;
+  color:white;
+  font-family: Georgia;
+  font-size:16px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 3px 3px #999;
+}
+
+.buttonformat:hover
+{
+  border-color: #FFFFFF;
+  color: black;
+  background-color: white;
+}
+
+#ageindicator
+{
+  position:relative;
+  left:550px;
+}

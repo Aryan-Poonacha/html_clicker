@@ -1,0 +1,119 @@
+1.Fix the canvas progress bar
+2.Fix this:
+
+
+function fight()
+{
+  if(immuneCheck == 0)
+  {
+    display('You need an immune system first!');
+    return;
+  }
+  else if(immuneCheck == 1)
+  {
+  var cellsLost, mitoLost, chloroLost = 0;
+  var cellsGained, mitoGained, chloroGained = 0;
+  var w = cells;
+  var x = chloros;
+  var z = mitos;
+
+    if((difficulty == "easy")&&(lysos<=10))
+    {
+      cellsLost = randomInt(1,10-lysos); //-9 to 9
+      mitoLost = Math.round((randomInt(0,4)-((1/5)*lysos))); //-2 to 4
+      chloroLost = Math.round((randomInt(0,8)-((1/3)*lysos))); // -3 to 8
+    }
+    else if((difficulty == "easy")&&(lysos>10))
+    {
+      cellsGained = Math.abs((randomInt(1,10-lysos))); //
+      mitoGained = Math.round(((1/5)*lysos) - (randomInt(0,2)));
+      chloroGained = Math.round(((1/3)*lysos) - (randomInt(0,3)));
+    }
+    else if((difficulty == "average")&&(lysos<=20))
+    {
+      cellsLost = randomInt(0,20-lysos); //0 to 19
+      mitoLost = Math.round((randomInt(0,10)-((1/2)*lysos))); // -10 to 10
+      chloroLost = Math.round((randomInt(0,15)-((1/3)*lysos))); //-7 to 15
+    }
+    else if((difficulty == "average")&&(lysos>20))
+    {
+      cellsGained = Math.abs((randomInt(1,20-lysos)));
+      mitoGained = Math.round(((1/5)*lysos)-(randomInt(0,4)));
+      chloroGained = Math.round(((1/3)*lysos)-(randomInt(0,7)));
+    }
+    else if((difficulty == "challenging")&&(lysos<=30))
+    {
+      cellsLost = randomInt(0,30-lysos); //0 to 29
+      mitoLost = Math.abs(Math.round((randomInt(0,15)-((1/2)*lysos)))); //-15 to 15 ie 0-15 with double chances
+      chloroLost = Math.round((randomInt(0,25)-((1/3)*lysos))); //-10 to 25 ie 0 to 25 with double chances upto 10
+    }
+    else if((difficulty == "challenging")&&(lysos>30))
+    {
+      cellsGained = Math.abs((randomInt(1,30-lysos)));
+      mitoGained = Math.round(((1/5)*lysos)-(randomInt(0,6)));
+      chloroGained = Math.round(((1/3)*lysos)-(randomInt(0,10)));
+    }
+
+    mitoLost = negtozero(mitoLost);
+    chloroLost = negtozero(chloroLost);
+    cellsLost = negtozero(cellsLost);
+
+    mitoGained = negtozero(mitoGained);
+    chloroGained = negtozero(chloroGained);
+    cellsGained = negtozero(cellsGained);
+
+    cells = cells - cellsLost;
+    mitos = mitos - mitoLost;
+    chloros = chloros - chloroLost;
+
+    mitos += mitoGained;
+    chloros += chloroGained;
+    cells += cellsGained;
+
+    mitos = negtozero(mitos);
+    cells = negtozero(cells);
+    chloros = negtozero(chloros);
+
+    divideCost = Math.round((15*(Math.pow(1.15,cells))));
+    chloroCost = Math.round((100*(Math.pow(1.15,chloros))));
+    mitoCost = (Math.round(150*(Math.pow(1.15,mitos))));
+
+    document.getElementById('dividebtn').innerHTML = "Divide(" + divideCost + " ATP)";
+    document.getElementById('chlorobtn').innerHTML = "Chloroplast("+chloroCost+" ATP)";
+    document.getElementById('mitobtn').innerHTML = "Mitochondria("+mitoCost+"ATP)";
+
+    document.getElementById('cellscount').innerHTML = "Cells = " +cells;
+    document.getElementById('chlorocount').innerHTML = "Chloroplast = " +chloros;
+    document.getElementById('mitocount').innerHTML = "Mitochondria = "+mitos;
+
+    display('The battle was long and hard.');
+    if((w-cells)>0)
+    {
+      display('You lost ' + (w-cells) + ' cells.');
+    }
+    if((cells-w)>0)
+    {
+      display('You gained ' + (cells-w) + ' cells.');
+    }
+    if((x-chloros)>0)
+    {
+      display('You lost ' + (x-chloros) + ' chloroplasts.');
+    }
+    if((chloros-x)>0)
+    {
+      display('You gained ' + (chloros-x) + ' cells.');
+    }
+    if((z-mitos)>0)
+    {
+      display('You lost ' + (z-mitos) + ' chloroplasts.');
+    }
+    if((mitos-z)>0)
+    {
+      display('You lost ' + (mitos-z) + ' chloroplasts.');
+    }
+    attackCheck = setInterval(function() { cellAttack(); },1000);
+
+    document.getElementById('fightbtn').style.display = "none";
+    document.getElementById('fleebtn').style.display = "none";
+  }
+}
